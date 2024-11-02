@@ -17,5 +17,10 @@ public struct ExecData
 {
     public Execs exec;
     public Tile[] tiles;
-    public Vector2Int[] cells;
+    public Vector2Int[] cells { get; private set; }
+
+    public void Initialize()
+    {
+        this.cells = Data.Cells[this.exec];
+    }
 }
