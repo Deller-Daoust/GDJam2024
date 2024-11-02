@@ -1,17 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SlotPrize2 : MonoBehaviour
 {
     [SerializeField] Transform transform;
     [SerializeField] SlotMachine slotMachine;
-    [SerializeField] public enum prize{
-        red,
-        green,
-        blue
-    }
+    [SerializeField] SlotMachine.prizeColour _prizecolour;
+
     void Start()
     {
+            if(transform.position.y > 0){
+                transform.position = new Vector3(transform.position.x,2);
+            }
+            else if (transform.position.y < 0){
+                transform.position = new Vector3(transform.position.x,-2);
+            }
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class SlotPrize2 : MonoBehaviour
                 //Stop the whole slot maching
                 slotMachine.stopSlots();
                 transform.position = new Vector3(transform.position.x,0);
+                slotMachine.setWinningColour(_prizecolour);
             }
         }
         if(slotMachine.getHardStop()){
