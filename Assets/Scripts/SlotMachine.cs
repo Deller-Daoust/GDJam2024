@@ -5,8 +5,8 @@ public class SlotMachine : MonoBehaviour
 {
     [SerializeField] public float MoveBound;
     [SerializeField] public float slotSpeed;
-    public bool isSpinning = true;
-    public bool hardStop;
+    public bool isSpinning = false;
+    public bool hardStop = true;
     [SerializeField] GameObject prize1;
     [SerializeField] GameObject prize2;
     [SerializeField] GameObject prize3;
@@ -18,7 +18,7 @@ public class SlotMachine : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hardStop = false;
+        hardStop = true;
     }
 
     // Update is called once per frame

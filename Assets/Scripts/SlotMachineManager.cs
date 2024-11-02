@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SlotMachineManager : MonoBehaviour
 {
@@ -11,9 +12,22 @@ public class SlotMachineManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        activeSlot = 0;
+        activeSlot = 4;
     }
 
+    IEnumerator outputWinOrLoss()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(1);
+
+        if((slot1.getWinningColour() == slot2.getWinningColour())
+        &&(slot2.getWinningColour() == slot3.getWinningColour())
+        &&(slot3.getWinningColour() == slot4.getWinningColour())){
+            Debug.Log("You Win");
+            } else {
+                Debug.Log("You lose");
+            }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -40,15 +54,7 @@ public class SlotMachineManager : MonoBehaviour
                 slot4.stopSpin();
                 activeSlot++;
                 //Declare win or loss
-                if((slot1.getWinningColour() == slot2.getWinningColour())
-                &&(slot2.getWinningColour() == slot3.getWinningColour())
-                &&(slot3.getWinningColour() == slot4.getWinningColour())){
-                    Debug.Log("You Win");
-                } else {
-                    Debug.Log("You lose");
-                }
-
-
+                StartCoroutine(outputWinOrLoss());
                 break;
                 case 4:
                 slot1.startSpin();
