@@ -47,6 +47,7 @@ public class Gacha : MonoBehaviour
                 }
                 else
                 {
+                    print("Bye bye money");
                     money = 0;
                 }
             }
