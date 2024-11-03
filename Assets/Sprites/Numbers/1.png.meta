@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 45bad7d7c42639d45a52a2cde1783bce
+guid: 1177f8420af1c824d9cb8c3b1ebb339c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2467118175142936252
-    second: Button_Dark_0
+      213: -855298285791758126
+    second: 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_Dark_0
+      name: 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 55
         y: 0
-        width: 1092
-        height: 358
+        width: 42
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44102bf471903cdd0800000000000000
-      internalID: -2467118175142936252
+      spriteID: 2d8b16a9dbe5124f0800000000000000
+      internalID: -855298285791758126
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Button_Dark_0: -2467118175142936252
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
