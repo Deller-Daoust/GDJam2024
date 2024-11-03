@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bac490cc9c0b7044fb684d21929b37bb
+guid: 473500be99cafa94db7e0a8ec55aa96c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,10 +103,10 @@ TextureImporter:
       name: PacmanOpenMouth_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 47
-        width: 394
-        height: 426
+        x: 4
+        y: 5
+        width: 51
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

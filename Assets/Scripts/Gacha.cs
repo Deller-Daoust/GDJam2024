@@ -9,25 +9,37 @@ using TMPro;
 public class Gacha : MonoBehaviour
 {
     [SerializeField] List<GameObject> gdsa = new List<GameObject>();
+    [SerializeField] private List<GameObject> keepGDSA = new List<GameObject>();
     [SerializeField] private int money;
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] TMP_Text currencyText;
+    [SerializeField] private SpriteRenderer sprite;
 
     private void Start()
     {
+        for (int i = 0; i < gdsa.Count; i++)
+        {
+            gdsa[i].SetActive(false);
+            keepGDSA[i].SetActive(false);
+            
+        }
         currencyText.SetText(money.ToString());
-        FindObjectOfType<AudioManager>().Play("Tetris");
     }
 
     private void Update()
     {
-        currencyText.SetText(money.ToString());
+        currencyText.SetText("Gacha Currency: " + money.ToString());
     }
 
     public void Roll()
     {
         if (money >= 10)
         {
+            for (int i = 0; i < gdsa.Count; i++)
+            {
+                gdsa[i].SetActive(false);
+            }
+            
             int prob = Random.Range(1, 101);
 
             money -= 10;
@@ -39,12 +51,13 @@ public class Gacha : MonoBehaviour
                 if (newProb == 1)
                 {
                     print("Inverted KC");
-                    Instantiate(gdsa[0], spawnPoint.transform.position, transform.rotation);
+                    gdsa[0].SetActive(true);
+                    keepGDSA[0].SetActive(true);
                 }
-                else if (newProb == 2)
-                {
+                else if (newProb == 2){
                     print("Inverted Lucas");
-                    Instantiate(gdsa[1], spawnPoint.transform.position, transform.rotation);
+                    gdsa[1].SetActive(true);
+                    keepGDSA[1].SetActive(true);
                 }
                 else
                 {
@@ -59,57 +72,60 @@ public class Gacha : MonoBehaviour
                 if (newProb == 1)
                 {
                     print("KC");
-                    Instantiate(gdsa[2], spawnPoint.transform.position, transform.rotation);
+                    gdsa[2].SetActive(true);
+                    keepGDSA[2].SetActive(true);
                 }
                 else
                 {
                     print("Adam");
-                    Instantiate(gdsa[3], spawnPoint.transform.position, transform.rotation);
+                    gdsa[3].SetActive(true);
+                    keepGDSA[3].SetActive(true);
                 }
             }
             //Uncommon
             else if (prob > 10 && prob <= 30)
             {
-                int newProb = Random.Range(1, 5);
+                int newProb = Random.Range(1, 3);
                 if (newProb == 1)
                 {
                     print("Dean");
-                    Instantiate(gdsa[4], spawnPoint.transform.position, transform.rotation);
+                    gdsa[4].SetActive(true);
+                    keepGDSA[4].SetActive(true);
                 }
                 else if (newProb == 2)
                 {
                     print("Logan");
-                    Instantiate(gdsa[5], spawnPoint.transform.position, transform.rotation);
-                }
-                else if (newProb == 3)
-                {
-                    print("Lucas");
-                    Instantiate(gdsa[6], spawnPoint.transform.position, transform.rotation);
-                }
-                else
-                {
-                    print("Jason");
-                    Instantiate(gdsa[7], spawnPoint.transform.position, transform.rotation);
+                    gdsa[5].SetActive(true);
+                    keepGDSA[5].SetActive(true);
                 }
             }
             //Common
             else if (prob > 30 && prob <= 100)
             {
-                int newProb = Random.Range(1, 4);
+                int newProb = Random.Range(1, 5);
                 if (newProb == 1)
                 {
                     print("Ruidger");
-                    Instantiate(gdsa[8], spawnPoint.transform.position, transform.rotation);
+                    gdsa[6].SetActive(true);
+                    keepGDSA[6].SetActive(true);
                 }
                 else if (newProb == 2)
                 {
-                    print("Lauren");
-                    Instantiate(gdsa[9], spawnPoint.transform.position, transform.rotation);
+                    print("Lucas");
+                    gdsa[7].SetActive(true);
+                    keepGDSA[7].SetActive(true);
+                }
+                else if (newProb == 3)
+                {
+                    print("Mikey");
+                    gdsa[8].SetActive(true);
+                    keepGDSA[8].SetActive(true);
                 }
                 else
                 {
-                    print("Mikey");
-                    Instantiate(gdsa[10], spawnPoint.transform.position, transform.rotation);
+                    print("Lauren");
+                    gdsa[9].SetActive(true);
+                    keepGDSA[9].SetActive(true);
                 }
             }
         }
