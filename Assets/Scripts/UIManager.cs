@@ -26,7 +26,8 @@ public class UIManager : MonoBehaviour
     {
         _playerScore += scoreValue;
         
-        scoreText.text = $"Score: {_playerScore}";
+        if (scoreText != null)
+            scoreText.text = $"Score: {_playerScore}";
     }
 
     public float GetPlayerScore()
