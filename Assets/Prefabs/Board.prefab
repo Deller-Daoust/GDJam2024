@@ -203,10 +203,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6c3dbdc31b27fc544bbea1555aec1c10, type: 2}
   - exec: 3
     tiles:
-    - {fileID: 11400000, guid: c6c4a22997ea23148bcf6cc952b8d6a1, type: 2}
-    - {fileID: 11400000, guid: c6c4a22997ea23148bcf6cc952b8d6a1, type: 2}
-    - {fileID: 11400000, guid: c6c4a22997ea23148bcf6cc952b8d6a1, type: 2}
-    - {fileID: 11400000, guid: c6c4a22997ea23148bcf6cc952b8d6a1, type: 2}
+    - {fileID: 11400000, guid: 6e9ec270cecad234faec62b5625edaa0, type: 2}
+    - {fileID: 11400000, guid: 3ae50b2956cead1449a2b83107a8b45a, type: 2}
+    - {fileID: 11400000, guid: f44a9d1c939d1ba46ae63a91c3f12d6d, type: 2}
+    - {fileID: 11400000, guid: 65e7d69c8d29d1040b2ad9b8753d3280, type: 2}
   - exec: 4
     tiles:
     - {fileID: 11400000, guid: 02b8b6c592633904eab0a663411142ff, type: 2}
