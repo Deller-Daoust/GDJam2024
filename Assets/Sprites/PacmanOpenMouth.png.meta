@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PacmanOpenMouth_0: 4082065584608379554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

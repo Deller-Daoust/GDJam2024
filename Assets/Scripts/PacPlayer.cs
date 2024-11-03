@@ -22,33 +22,37 @@ public class PacPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Keypad4))
         {
-            this.tilemap.SetTile(position, null);
-            Move(Vector2Int.left);
-            this.tilemap.SetTile(position, tile);
-            
-            //_pacMove.SetDirection("left");
+            DirectionalMove(Vector2Int.left);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad6))
         {
-            this.tilemap.SetTile(position, null);
-            Move(Vector2Int.right);
-            this.tilemap.SetTile(position, tile);
-            //_pacMove.SetDirection("right");
+            DirectionalMove(Vector2Int.right);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad8))
         {
-            this.tilemap.SetTile(position, null);
-            Move(Vector2Int.up);
-            this.tilemap.SetTile(position, tile);
-            //_pacMove.SetDirection("up");
+            DirectionalMove(Vector2Int.up);
         }
         else if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            this.tilemap.SetTile(position, null);
-            Move(Vector2Int.down);
-            this.tilemap.SetTile(position, tile);
-            //_pacMove.SetDirection("down");
+            DirectionalMove(Vector2Int.down);
         }
+    }
+
+    private void DirectionalMove(Vector2Int direction)
+    {
+        this.tilemap.SetTile(position, null);
+            
+        Vector2Int toMove = direction;
+        Vector3Int newPosition = this.position;
+
+        newPosition.x += toMove.x;
+        newPosition.y += toMove.y;
+        
+        if (this.tilemap.GetTile(newPosition) != null)
+            UIManager.Instance.UpdateScore(50);
+            
+        Move(direction);
+        this.tilemap.SetTile(position, tile);
     }
     
     private void Move(Vector2Int translation) {
