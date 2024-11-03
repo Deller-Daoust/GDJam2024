@@ -16,6 +16,7 @@ public class Gacha : MonoBehaviour
     private void Start()
     {
         currencyText.SetText(money.ToString());
+        FindObjectOfType<AudioManager>().Play("Tetris");
     }
 
     private void Update()
