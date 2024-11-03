@@ -34,6 +34,14 @@ public class UIManager : MonoBehaviour
     {
         return _playerScore;
     }
+
+    public void SpinSlots(float cost)
+    {
+        if (cost < _playerScore)
+            return;
+        
+        _playerScore -= cost;
+    }
     #endregion
 
     #region Menu
