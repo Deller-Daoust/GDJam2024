@@ -10,12 +10,12 @@ public class SlotPrize2 : MonoBehaviour
 
     void Start()
     {
-            if(transform.position.y > 0){
-                transform.position = new Vector3(transform.position.x,2);
-            }
-            else if (transform.position.y < 0){
-                transform.position = new Vector3(transform.position.x,-2);
-            }
+        if(transform.position.y > 0){
+            transform.position = new Vector3(transform.position.x,2);
+        }
+        else if (transform.position.y < 0){
+            transform.position = new Vector3(transform.position.x,-2);
+        }
     }
 
     // Update is called once per frame
