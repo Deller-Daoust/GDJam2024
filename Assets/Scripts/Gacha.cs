@@ -10,13 +10,15 @@ public class Gacha : MonoBehaviour
 {
     [SerializeField] List<GameObject> gdsa = new List<GameObject>();
     [SerializeField] private List<GameObject> keepGDSA = new List<GameObject>();
-    [SerializeField] private int money;
+    [SerializeField] public int money;
     [SerializeField] private GameObject spawnPoint;
-    [SerializeField] TMP_Text currencyText;
+    [SerializeField] public TMP_Text currencyText;
     [SerializeField] private SpriteRenderer sprite;
 
     private void Start()
     {
+        money = 0;
+        
         for (int i = 0; i < gdsa.Count; i++)
         {
             gdsa[i].SetActive(false);

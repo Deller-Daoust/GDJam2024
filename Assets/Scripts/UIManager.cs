@@ -37,10 +37,8 @@ public class UIManager : MonoBehaviour
 
     public void SpinSlots(float cost)
     {
-        if (cost < _playerScore)
-            return;
-        
         _playerScore -= cost;
+        scoreText.text = $"Score: {_playerScore}";
     }
     #endregion
 

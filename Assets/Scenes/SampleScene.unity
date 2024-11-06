@@ -3389,6 +3389,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1150069572907909390, guid: c2e67c60b371bbf4d8763bd3997a3ac8, type: 3}
+      propertyPath: gacha
+      value: 
+      objectReference: {fileID: 188674883}
     - target: {fileID: 1214531514364964597, guid: c2e67c60b371bbf4d8763bd3997a3ac8, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -3398,7 +3402,8 @@ PrefabInstance:
       value: SlotMachine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4875284552767495300, guid: c2e67c60b371bbf4d8763bd3997a3ac8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e67c60b371bbf4d8763bd3997a3ac8, type: 3}
